@@ -1,0 +1,11 @@
+/* Setting root font size to 62.5% so 10px = 1 rem, 15px = 1.5rem, so and and so forth  */
+html {
+  font-size: 62.5%;
+}
+.wp-block-themeisle-blocks-posts-grid .o-posts-grid-post-image img {
+  max-height: 250px;
+  object-fit: cover;
+}
+.test {
+  background-color: rgb(62, 209, 21);
+}
