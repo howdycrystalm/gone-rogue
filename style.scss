@@ -8,7 +8,11 @@ html {
   max-height: 250px;
   object-fit: cover;
 }
-
+.heading-position {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+}
 .performance-card {
   margin: 0 2rem;
   max-width: 350px;

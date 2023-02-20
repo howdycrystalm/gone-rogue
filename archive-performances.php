@@ -4,7 +4,11 @@
 */
 
 get_header(); ?>
-
+<div class="container">
+    <div class="row">
+        <h1 class="heading-position"><?php echo get_the_archive_title();?></h1>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <?php
