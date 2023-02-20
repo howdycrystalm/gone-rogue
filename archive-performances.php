@@ -30,25 +30,27 @@ get_header(); ?>
                             <h2 class="card-title"><?php the_title(); ?></h2>
                             <h3><?php the_field('performers_or_group_name'); ?></h3>
                             <h4>
-                                <a href="<?php the_field('venue_google_map_link'); ?>"><?php the_field('venue_name'); ?></a>
+                                <a href="<?php the_field('venue_google_map_link'); ?>" target="_blank"><?php the_field('venue_name'); ?></a>
                             </h4>
                             <h4><?php the_field('ticket_price'); ?></h3>
-                            <div class="dates-times">
-                                <h4><?php the_field('performance_date_and_time_1'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_2'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_3'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_4'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_5'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_6'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_7'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_8'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_9'); ?></h4>
-                                <h4><?php the_field('performance_date_and_time_10'); ?></h4>
+                            <div class="event-dates">
+                                <ul class="event-dates-list">
+                                    <li><?php the_field('performance_date_and_time_1'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_2'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_3'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_4'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_5'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_6'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_7'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_8'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_9'); ?></li>
+                                    <li><?php the_field('performance_date_and_time_10'); ?><li>
+                                </ul>
                             </div>
                         </div>
-                        <button class="wp-block-themeisle-blocks-button wp-block-button is-style-primary" onclick="window.location.href='<?php the_field('buy_ticket_link'); ?>'">
-                        <?php the_field('button_text'); ?>
-                        </button>
+                        <div class="btn-wrapper">
+                            <button class="wp-block-themeisle-blocks-button wp-block-button is-style-primary" onclick="window.location.href='<?php the_field('buy_ticket_link'); ?>'"><?php the_field('button_text'); ?></button>
+                        </div>
                     </div>
                 </div>
 

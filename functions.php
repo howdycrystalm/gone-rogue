@@ -78,15 +78,50 @@ add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 	*/
 		
 	add_action( 'init', 'performance_custom_post_type', 0 );
+/**
+ * Enqueue scripts and styles.
+ */
+// function fusd_foundations_scripts() {
+// 	wp_enqueue_style( 'fusd-foundations-style', get_stylesheet_uri(), array(), _S_VERSION );
+// 	wp_style_add_data( 'fusd-foundations-style', 'rtl', 'replace' );
+
+// 	wp_enqueue_script( 'fusd-foundations-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+// 	wp_enqueue_script( 'fusd-foundations-scripts', get_template_directory_uri() . '/js/scripts.js');
+// 	wp_enqueue_script( 'fusd-foundations-popup', get_template_directory_uri() . '/js/popup.js', array(), _S_VERSION, true);
+
+// 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+// 		wp_enqueue_script( 'comment-reply' );
+// 	}
+// }
+// add_action( 'wp_enqueue_scripts', 'fusd_foundations_scripts' );
 
 /**
- * Compile Sass
- */	
+ * Enqueue scripts and styles.
+ */
+// Enqueue CSS
 function enqueue_styles() {
-    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/Sass/style.css', array(), '1.0', 'all' );
+    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+
+// Enqueue Child Theme JS
+// function child_theme_scripts() {
+//   wp_enqueue_script( 'event-dates-dimensions', get_template_directory_uri() . '/scripts.js', array(), '1.0', true );
+
+//   // You can add more scripts by calling wp_enqueue_script again with different parameters
+
+// }
+function child_theme_scripts() {
+  wp_enqueue_script( 'child_theme_script', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0', true );
+
+  // You can add more scripts by calling wp_enqueue_script again with different parameters
+}
+
+add_action( 'wp_enqueue_scripts', 'child_theme_scripts' );
 
 
 //archives-page-functions.php add widgets and enqueues archives-page-style.css
 require get_theme_file_path('/views/archives-page-functions.php');
+
+
+

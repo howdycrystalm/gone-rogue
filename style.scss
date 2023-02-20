@@ -3,7 +3,6 @@
 html {
   font-size: 62.5%;
 }
-
 .wp-block-themeisle-blocks-posts-grid .o-posts-grid-post-image img {
   max-height: 250px;
   object-fit: cover;
@@ -18,21 +17,28 @@ html {
   max-width: 350px;
   background-color: turquoise;
   h2 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
   h3 {
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     margin-bottom: 0rem;
   }
   h4 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0rem;
     a {
       color: var(--nv-secondary-accent);
     }
   }
+  .card-img-top {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: top;
+  }
   /* maxes card title to 3 h3 lines */
   .card-title {
+    height: 132px;
     background-color: tomato;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -40,13 +46,31 @@ html {
     -webkit-line-clamp: 3; /* number of lines to show */
             line-clamp: 3; 
     -webkit-box-orient: vertical;
-    margin: 10px, 0, 0, 20px;
+    margin: 10px, 0, 0, 20px !important;
+  }
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .btn {
     font-size: 1.6rem;
     width: 75px;
   }
-  .dates-times {
+  .event-dates {
+    width: 350px;
+    height: 220px;
     margin: 2rem 0;
+    overflow-y: auto;
+    background-color: rebeccapurple;
+
+  }  
+
+  .event-dates-list li {
+    font-size: 1.9rem; /* Default font size */
+  }
+  
+  .event-dates-list.small li {
+    font-size: 1.6rem; /* Smaller font size */
   }
 }
