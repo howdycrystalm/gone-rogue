@@ -81,4 +81,4 @@ function performance_custom_post_type() {
 
 //archives-page-functions.php add widgets and enqueues archives-page-style.css
 
-require get_theme_file_path('/archives-page-functions.php');
+// require get_theme_file_path('/archives-page-functions.php');

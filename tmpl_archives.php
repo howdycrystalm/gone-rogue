@@ -1,4 +1,4 @@
-
+<!-- I dont think this does anything. But its supposed to be page template -->
 <?php
 /* Template Name: tmpl_archives.php */
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
   <div class="content-left-wrap col-md-9">
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
-        <h1>Custom Archive - Saturday 2/19 attempt tmp_archives.php, which is the archive page template you choose on the right side in page editor</h1>
+        <h1>Page Template, tmpl_archives.php 2/20</h1>
         <?php while ( have_posts() ) : the_post(); // standard WordPress loop. ?>
 
           <?php get_template_part( 'content', 'tmpl_archives' ); // loading our custom file. ?>

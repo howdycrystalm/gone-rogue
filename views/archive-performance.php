@@ -1,3 +1,4 @@
+<!-- i dont think this does anything -->
 <?php
 /**
  * The template for displaying archive pages
