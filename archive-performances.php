@@ -20,13 +20,13 @@ get_header(); ?>
             while ( $query->have_posts() ) : $query->the_post(); ?>
 
                 <div class="col-md-4 mb-4">
-                    <div class="card test">
+                    <div class="card performance-card">
                         <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="<?php the_title(); ?>">
                         <div class="card-body">
-                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <h3 class="card-title"><?php the_title(); ?></h2>
                             <p class="card-text"><?php the_excerpt(); ?></p>
                             <!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read more', 'textdomain' ); ?></a> -->
-                            <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read more', 'textdomain' ); ?></a>
+                            <!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read more', 'textdomain' ); ?></a> -->
                             <a href="<?php the_field('buy_ticket_link'); ?>" class="btn btn-primary"><?php _e( 'Buy tickets', 'textdomain' ); ?></a>
                         </div>
                         <!-- <ul class="list-group list-group-flush">
