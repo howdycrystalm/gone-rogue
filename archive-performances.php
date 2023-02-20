@@ -27,15 +27,28 @@ get_header(); ?>
                     <div class="card performance-card">
                         <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="<?php the_title(); ?>">
                         <div class="card-body">
-                            <h3 class="card-title"><?php the_title(); ?></h2>
-                            <p class="card-text"><?php the_excerpt(); ?></p>
-                            <!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read more', 'textdomain' ); ?></a> -->
-                            <!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read more', 'textdomain' ); ?></a> -->
-                            <a href="<?php the_field('buy_ticket_link'); ?>" class="btn btn-primary"><?php _e( 'Buy tickets', 'textdomain' ); ?></a>
+                            <h2 class="card-title"><?php the_title(); ?></h2>
+                            <h3><?php the_field('performers_or_group_name'); ?></h3>
+                            <h4>
+                                <a href="<?php the_field('venue_google_map_link'); ?>"><?php the_field('venue_name'); ?></a>
+                            </h4>
+                            <h4><?php the_field('ticket_price'); ?></h3>
+                            <div class="dates-times">
+                                <h4><?php the_field('performance_date_and_time_1'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_2'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_3'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_4'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_5'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_6'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_7'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_8'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_9'); ?></h4>
+                                <h4><?php the_field('performance_date_and_time_10'); ?></h4>
+                            </div>
                         </div>
-                        <!-- <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><?php echo get_post_meta( get_the_ID(), 'performance_date', true ); ?></li>
-                        </ul> -->
+                        <button class="wp-block-themeisle-blocks-button wp-block-button is-style-primary" onclick="window.location.href='<?php the_field('buy_ticket_link'); ?>'">
+                        <?php the_field('button_text'); ?>
+                        </button>
                     </div>
                 </div>
 
