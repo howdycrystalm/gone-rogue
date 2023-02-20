@@ -20,7 +20,7 @@ get_header(); ?>
             while ( $query->have_posts() ) : $query->the_post(); ?>
 
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card test">
                         <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="<?php the_title(); ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>

@@ -1,17 +1,17 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-if ( ! function_exists( 'neve_child_load_css' ) ):
-	/**
-	 * Load CSS file.
-	 */
-	function neve_child_load_css() {
-		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'neve-style' ), NEVE_VERSION );
-	}
-endif;
-add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
+// if ( ! defined( 'ABSPATH' ) ) {
+// 	exit;
+// }
+// if ( ! function_exists( 'neve_child_load_css' ) ):
+// 	/**
+// 	 * Load CSS file.
+// 	 */
+// 	function neve_child_load_css() {
+// 		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'neve-style' ), NEVE_VERSION );
+// 	}
+// endif;
+// add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 
 /*
 * Creating a function to create our CPT
@@ -78,6 +78,15 @@ add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 	*/
 		
 	add_action( 'init', 'performance_custom_post_type', 0 );
+
+/**
+ * Compile Sass
+ */	
+function enqueue_styles() {
+    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+
 
 //archives-page-functions.php add widgets and enqueues archives-page-style.css
 require get_theme_file_path('/views/archives-page-functions.php');

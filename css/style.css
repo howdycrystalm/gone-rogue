@@ -20,6 +20,6 @@ html {
   max-height: 250px;
   object-fit: cover;
 }
-/* .bypostauthor {
-  display: none;
-} */
+.test {
+  background-color: tomato;
+}
