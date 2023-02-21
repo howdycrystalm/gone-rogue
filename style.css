@@ -30,6 +30,14 @@ html {
 .card-flex-wrap {
   -ms-flex-wrap: wrap !important;
       flex-wrap: wrap !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .performance-card {
@@ -127,5 +135,31 @@ html {
 .performance-card .event-dates-list.small li {
   font-size: 1.6rem;
   /* Smaller font size */
+}
+
+/*****************************/
+/*       Media Queries       */
+/*****************************/
+@media (min-width: 992px) and (max-width: 1172px) {
+  .performance-card {
+    max-width: 290px;
+  }
+  .performance-card .card-title {
+    height: 115px;
+  }
+  .performance-card h2 {
+    font-size: 2.7rem;
+  }
+  .performance-card .performer-name {
+    font-size: 2.1rem;
+  }
+  .performance-card .event-dates-list li {
+    font-size: 1.6rem;
+  }
+  .performance-card .is-style-primary {
+    width: 145px;
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

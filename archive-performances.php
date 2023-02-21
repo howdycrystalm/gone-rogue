@@ -9,7 +9,7 @@ get_header(); ?>
         <h1 class="heading-position"><?php echo get_the_archive_title();?></h1>
     </div>
 </div>
-<div class="container post-archive-wrapper">
+<div class="container post-archive-wrapper card-flex-wrap">
     <div class="row card-flex-wrap">
         <?php
         $args = array(

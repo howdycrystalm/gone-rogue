@@ -21,6 +21,9 @@ html {
 //Wraps cards at views > 1172px
 .card-flex-wrap {
   flex-wrap: wrap !important;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 .performance-card {
   max-width: 350px;
@@ -99,4 +102,33 @@ html {
   .event-dates-list.small li {
     font-size: 1.6rem; /* Smaller font size */
   }
+}
+/*****************************/
+/*       Media Queries       */
+/*****************************/
+@media (min-width: 992px) and (max-width: 1172px) {
+
+  .performance-card {
+    max-width: 290px;
+    .card-title {
+     height: 115px;
+    }
+     h2 {
+      font-size: 2.7rem;
+    }
+    .performer-name {
+      font-size: 2.1rem;
+    }
+    .event-dates-list {
+      li {
+      font-size: 1.6rem;
+      }
+    }
+    .is-style-primary {
+      width: 145px;
+      font-size: 1.6rem;
+      padding: 1rem;
+    }
+  }
+
 }
