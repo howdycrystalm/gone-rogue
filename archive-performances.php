@@ -10,7 +10,7 @@ get_header(); ?>
     </div>
 </div>
 <div class="container post-archive-wrapper">
-    <div class="row">
+    <div class="row card-flex-wrap">
         <?php
         $args = array(
             'post_type' => 'performances',

@@ -10,6 +10,9 @@ html {
      object-fit: cover;
 }
 
+/*****************************/
+/* Performance Archive Cards */
+/*****************************/
 .heading-position {
   height: 25rem;
   display: -webkit-box;
@@ -24,10 +27,15 @@ html {
   margin-bottom: 100px;
 }
 
+.card-flex-wrap {
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
+
 .performance-card {
-  margin: 0 2rem;
   max-width: 350px;
   border: 1px solid #7e8693;
+  margin: 0 2rem 5rem;
   /* maxes card title to 3 h3 lines */
 }
 
