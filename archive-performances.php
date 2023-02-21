@@ -9,7 +9,7 @@ get_header(); ?>
         <h1 class="heading-position"><?php echo get_the_archive_title();?></h1>
     </div>
 </div>
-<div class="container">
+<div class="container post-archive-wrapper">
     <div class="row">
         <?php
         $args = array(
@@ -26,9 +26,9 @@ get_header(); ?>
                 <div class="col-md-4 mb-4">
                     <div class="card performance-card">
                         <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="<?php the_title(); ?>">
-                        <div class="card-body">
+                        <div class="card-body card-body-wrapper">
                             <h2 class="card-title"><?php the_title(); ?></h2>
-                            <h3><?php the_field('performers_or_group_name'); ?></h3>
+                            <h3 class="performer-name"><?php the_field('performers_or_group_name'); ?></h3>
                             <h4>
                                 <a href="<?php the_field('venue_google_map_link'); ?>" target="_blank"><?php the_field('venue_name'); ?></a>
                             </h4>
