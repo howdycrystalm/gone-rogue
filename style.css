@@ -80,6 +80,7 @@ html {
 
 .performance-card .card-title {
   height: 132px;
+  background-color: tomato;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -93,6 +94,7 @@ html {
   font-size: 2.5rem;
   height: 55px;
   line-height: 2.5rem;
+  background-color: #47ddff;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -125,6 +127,7 @@ html {
   height: 220px;
   margin: 2rem 0;
   overflow-y: auto;
+  background-color: rebeccapurple;
 }
 
 .performance-card .event-dates-list li {
@@ -144,6 +147,9 @@ html {
   .performance-card {
     max-width: 290px;
   }
+  .performance-card .card-img-top {
+    height: 17rem;
+  }
   .performance-card .card-title {
     height: 115px;
   }
@@ -160,6 +166,15 @@ html {
     width: 145px;
     font-size: 1.6rem;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 779px) {
+  .performance-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
