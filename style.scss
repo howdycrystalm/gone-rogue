@@ -102,6 +102,8 @@ html {
 /*****************************/
 /*       Media Queries       */
 /*****************************/
+
+/*** Performance Archive ***/
 @media (min-width: 992px) and (max-width: 1172px) {
 
   .performance-card {
@@ -168,3 +170,9 @@ html {
     }
   }
 }
+/*** Movile Nav Logo - Edits theme class ***/
+  @media (max-width: 960px) {
+    .builder-item--logo {
+      --maxwidth: 140px;
+    }
+  }
