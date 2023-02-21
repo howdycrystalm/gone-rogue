@@ -11,15 +11,12 @@ html {
 /* Performance Archive Cards */
 /*****************************/
 .heading-position {
-  height: 25rem;
+  height: 20rem;
   display: flex;
   align-items: center;
 }
-.post-archive-wrapper-desktop {
+.post-archive-wrapper{
   margin-bottom: 100px;
-}
-.post-archive-wrapper-mobile {
-  display: none;
 }
 //Wraps cards at views > 1172px
 .card-flex-wrap {
@@ -34,7 +31,6 @@ html {
   margin: 0 2rem 5rem;
   h2 {
     font-size: 3.2rem;
-    // margin: 0 0 20px 0;
   }
   h3 {
     font-size: 2.5rem;
@@ -54,12 +50,12 @@ html {
     object-position: top;
   }
   .card-body-wrapper {
-    padding: 0 5px;
+    padding: 0 2rem;
   }
   /* maxes card title to 3 h3 lines */
   .card-title {
     height: 132px;
-    background-color: tomato;
+    background-color: #fff;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -71,7 +67,6 @@ html {
     font-size: 2.5rem;
     height: 55px;
     line-height: 2.5rem;
-    background-color: rgb(71, 221, 255);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -90,12 +85,10 @@ html {
     width: 75px;
   }
   .event-dates {
-    width: 350px;
+    max-width: 350px;
     height: 220px;
     margin: 2rem 0;
     overflow-y: auto;
-    background-color: rebeccapurple;
-
   }  
 
   .event-dates-list li {
@@ -139,20 +132,39 @@ html {
 
 }
 @media (max-width: 779px) {
-  .post-archive-wrapper-desktop {
-    display: none;
-  }
-  .post-archive-wrapper-mobile {
-    margin-bottom: 100px;
-  }
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: flex;
+  .heading-position {
+    height: 13rem;
   }
   .performance-card {
     display: flex;
+    flex-direction: column;
     max-width: none;
+    width: 100vw;
+    max-width: 41rem;
+    h2 {
+      font-size: 2.2rem;
+      margin: 0 auto;
+    }
+    .card-body-wrapper {
+      padding: 0 7px;
+      width: 330px;
+      padding: 0.5rem 1rem;
+      margin: 0 auto;
+    }
+    .card-title {
+      height: 60px;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      position: relative;
+      bottom: 30px;
+    }
+    .performer-name {
+      font-size: 1.9rem;
+      height: 49px;
+      line-height: 2.2rem;
+    }
+    .event-dates {
+      height: 175px;
+    }
   }
 }
