@@ -15,8 +15,11 @@ html {
   display: flex;
   align-items: center;
 }
-.post-archive-wrapper {
+.post-archive-wrapper-desktop {
   margin-bottom: 100px;
+}
+.post-archive-wrapper-mobile {
+  display: none;
 }
 //Wraps cards at views > 1172px
 .card-flex-wrap {
@@ -136,6 +139,18 @@ html {
 
 }
 @media (max-width: 779px) {
+  .post-archive-wrapper-desktop {
+    display: none;
+  }
+  .post-archive-wrapper-mobile {
+    margin-bottom: 100px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
   .performance-card {
     display: flex;
     max-width: none;

@@ -23,8 +23,12 @@ html {
           align-items: center;
 }
 
-.post-archive-wrapper {
+.post-archive-wrapper-desktop {
   margin-bottom: 100px;
+}
+
+.post-archive-wrapper-mobile {
+  display: none;
 }
 
 .card-flex-wrap {
@@ -170,6 +174,20 @@ html {
 }
 
 @media (max-width: 779px) {
+  .post-archive-wrapper-desktop {
+    display: none;
+  }
+  .post-archive-wrapper-mobile {
+    margin-bottom: 100px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .performance-card {
     display: -webkit-box;
     display: -ms-flexbox;
