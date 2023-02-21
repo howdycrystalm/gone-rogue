@@ -139,7 +139,7 @@ html {
 }
 
 /*****************************/
-/*       Media Queries       */
+/* Performance Media Queries */
 /*****************************/
 /*** Performance Archive ***/
 @media (min-width: 992px) and (max-width: 1172px) {
@@ -211,10 +211,44 @@ html {
   }
 }
 
+/*****************************/
+/*         Nav Menu         */
+/*****************************/
 /*** Movile Nav Logo - Edits theme class ***/
 @media (max-width: 960px) {
   .builder-item--logo {
     --maxwidth: 140px;
+  }
+}
+
+/*****************************/
+/*         Homepage          */
+/*****************************/
+/*****************************/
+/*   Homepage Media Queries  */
+/*****************************/
+@media (max-width: 600px) {
+  .wp-block-themeisle-blocks-button-group.collapse-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 1040px) {
+  .about-and-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: red;
   }
 }
 /*# sourceMappingURL=style.css.map */

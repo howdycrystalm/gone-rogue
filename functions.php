@@ -88,16 +88,9 @@ function enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
-// Enqueue Child Theme JS
-// function child_theme_scripts() {
-//   wp_enqueue_script( 'event-dates-dimensions', get_template_directory_uri() . '/scripts.js', array(), '1.0', true );
-
-//   // You can add more scripts by calling wp_enqueue_script again with different parameters
-
-// }
 function child_theme_scripts() {
   wp_enqueue_script( 'child_theme_script', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0', true );
-
+	wp_enqueue_script( 'child_theme_script', get_stylesheet_directory_uri() . '/daddy-script.js', array(), '1.0', true );
   // You can add more scripts by calling wp_enqueue_script again with different parameters
 }
 

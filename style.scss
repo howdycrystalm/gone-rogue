@@ -100,7 +100,7 @@ html {
   }
 }
 /*****************************/
-/*       Media Queries       */
+/* Performance Media Queries */
 /*****************************/
 
 /*** Performance Archive ***/
@@ -170,9 +170,40 @@ html {
     }
   }
 }
+/*****************************/
+/*         Nav Menu         */
+/*****************************/
 /*** Movile Nav Logo - Edits theme class ***/
   @media (max-width: 960px) {
     .builder-item--logo {
       --maxwidth: 140px;
     }
   }
+
+/*****************************/
+/*         Homepage          */
+/*****************************/
+.about-and-contact {
+
+}
+/*****************************/
+/*   Homepage Media Queries  */
+/*****************************/
+@media (max-width: 600px) {
+  .wp-block-themeisle-blocks-button-group.collapse-mobile {
+      flex-direction: column;
+      align-items: center;
+  }
+} 
+@media (max-width: 1040px) {
+//   .wp-block-themeisle-blocks-advanced-columns .innerblocks-wrap .about-and-contact {
+//     background-color: red;
+//     flex-direction: column; 
+// }
+  .about-and-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+}
+  

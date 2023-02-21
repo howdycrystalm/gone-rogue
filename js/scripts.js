@@ -5,5 +5,6 @@
   if (eventDatesList.children.length > 4) {
     eventDatesList.classList.add('small');
   }
+
   
 })();
