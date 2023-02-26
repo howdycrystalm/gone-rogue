@@ -1,6 +1,6 @@
 <?php
 /**
- * Archive Post view template.
+ * News Archive Post view template. Without this, there is no News Archive page aka index.php
  *
  * @package Neve
  */
