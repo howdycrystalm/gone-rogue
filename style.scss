@@ -17,6 +17,9 @@ Tags: blog, custom-logo, e-commerce, rtl-language-support, post-formats, grid-la
 html {
   font-size: 62.5%;
 }
+a:focus {
+  outline: 2px solid var(--nv-secondary-accent);
+}
 .wp-block-themeisle-blocks-posts-grid .o-posts-grid-post-image img {
   max-height: 250px;
   object-fit: cover;
@@ -219,7 +222,12 @@ footer {
   color:var(--nv-secondary-accent);
 }
 .footer-alignment {
+  font-size: 2rem;
   justify-content: space-around;
+}
+.icon-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-menu-container ul {
