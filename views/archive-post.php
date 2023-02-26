@@ -35,3 +35,7 @@ $load_before_after_hooks = get_theme_mod( 'neve_blog_archive_layout', 'grid' ) !
 		</div>
 	</div>
 </article>
+<!-- widget sidebar -->
+<?php 
+/* get_sidebar(); */
+?>

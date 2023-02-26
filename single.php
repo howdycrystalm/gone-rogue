@@ -44,5 +44,6 @@ get_header();
 			<?php do_action('single-post', 'right' ); ?>
 		</div>
 	</div>
+
 <?php
 get_footer();
