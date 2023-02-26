@@ -59,7 +59,7 @@ a:focus {
 }
 
 .performance-card {
-  max-width: 350px;
+  width: 350px;
   border: 1px solid #7e8693;
   margin: 0 2rem 5rem;
   /* maxes card title to 3 h3 lines */
@@ -85,7 +85,7 @@ a:focus {
 
 .performance-card .card-img-top {
   width: 100%;
-  height: 20rem;
+  height: 30.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
