@@ -259,6 +259,12 @@ html {
 footer {
   background-color: #f2f2f2;
   padding: 20px 0;
+  color: var(--nv-secondary-accent);
+}
+
+.footer-alignment {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .footer-menu-container ul {
@@ -278,6 +284,7 @@ footer {
 
 .footer-menu-container a {
   color: #333;
+  font-family: var(--headingsfontfamily), var(--nv-fallback-ff);
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -285,6 +292,7 @@ footer {
 
 .footer-social-media-icons {
   text-align: right;
+  font-size: 2.5rem;
 }
 
 .footer-social-media-icons a {

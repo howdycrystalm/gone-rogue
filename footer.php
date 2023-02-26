@@ -11,13 +11,15 @@
 
 ?>
 <footer>
+		<div class="container">
+			<div class="row footer-alignment">
 		<div class="footer-menu-container">
 			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 		</div>
 		<?php
         $args = array(
             'post_type' => 'socials',
-            'post_status' => 'publish',
+            'post_status' => 'private',
             'posts_per_page' => -1
         );
 
@@ -41,6 +43,8 @@
 
 			endif;
 		?>
+		</div>
+		</div>
 		<div class="site-info">
 			<span><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?></span>
 			<span><a href="#">Terms and Conditions</a></span>
