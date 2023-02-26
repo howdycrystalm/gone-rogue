@@ -9,7 +9,8 @@ get_header(); ?>
         <h1 class="heading-position"><?php echo get_the_archive_title();?></h1>
     </div>
 </div>
-<!-- Desktop -->
+
+<!-- Cards -->
 <div class="container post-archive-wrapper card-flex-wrap">
     <div class="row card-flex-wrap">
         <?php
@@ -67,9 +68,10 @@ get_header(); ?>
         ?>
     </div>
 </div>
+<?php do_action('neve_do_sidebar','single-post', 'right' ); ?>
 
 <!-- Mobile -->
 
-<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>
