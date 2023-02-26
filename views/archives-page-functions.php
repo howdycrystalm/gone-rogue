@@ -31,7 +31,7 @@ add_action('widgets_init', 'archives_page_widgets_init');
 if(!function_exists('archives_page_styles')) :
   function archives_page_styles() {
     if(is_page_template('tmpl_archives.php')) {
-      wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/archives-page-style.css'); // standard way of adding style sheets in WP.
+      wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/views/archives-page-style.css'); // standard way of adding style sheets in WP.
     }
   }
   endif;

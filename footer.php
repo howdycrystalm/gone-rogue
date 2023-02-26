@@ -10,25 +10,46 @@
  */
 
 ?>
+<footer>
+		<div class="footer-menu-container">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+		</div>
+		<?php
+        $args = array(
+            'post_type' => 'socials',
+            'post_status' => 'publish',
+            'posts_per_page' => -1
+        );
 
-	<footer id="colophon" class="site-footer">
+        $query = new WP_Query( $args );
+
+        if ( $query->have_posts() ) :
+            while ( $query->have_posts() ) : $query->the_post(); ?>
+		<div class="footer-social-media-icons">
+			<a href="<?php echo the_field('facebook_url'); ?>"><i class="fab fa-facebook-f fa-xl"></i></a>
+			<a href="<?php echo the_field('twitter_url'); ?>"><i class="fab fa-twitter fa-xl"></i></a>
+			<a href="<?php echo the_field('instagram_url'); ?>"><i class="fab fa-instagram fa-xl"></i></a>
+			<a href="<?php echo the_field('youtube_url'); ?>"><i class="fab fa-youtube fa-xl"></i></a>
+		</div>
+		<?php endwhile;
+
+wp_reset_postdata();
+
+else :
+
+echo __( 'No socials found', 'textdomain' );
+
+endif;
+?>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			<span><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?></span>
+			<span><a href="#">Terms and Conditions</a></span>
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
