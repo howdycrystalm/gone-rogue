@@ -171,8 +171,4 @@ function child_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'child_theme_scripts' );
 
 
-//archives-page-functions.php add widgets and enqueues archives-page-style.css
-require get_theme_file_path('/views/archives-page-functions.php');
-
-
 
