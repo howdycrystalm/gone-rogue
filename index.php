@@ -14,8 +14,18 @@
  */
 $container_class = apply_filters( 'neve_container_class_filter', 'container', 'blog-archive' );
 
-get_header();
+get_header(); ?>
+<!-- Shows Archive Page Title -->
+<?php
+$news_archive_title = get_the_title( get_option('page_for_posts', true) );
+?>
+<div class="container">
+    <div class="row">
+        <h1 class="heading-position news-h1"><?php echo $news_archive_title;?></h1>
+    </div>
+</div>
 
+<?
 $wrapper_classes = [ 'posts-wrapper' ];
 if ( ! neve_is_new_skin() ) {
 	$wrapper_classes[] = 'row';
@@ -49,7 +59,7 @@ $load_before_after_hooks = get_theme_mod( 'neve_blog_archive_layout', 'grid' ) =
 			 */
 			do_action( 'neve_do_sidebar', 'blog-archive', 'left' );
 			?>
-			<div class="nv-index-posts blog col">
+			<div class="nv-index-posts blog col remove-top-margin">
 				<?php
 				/**
 				 * Executes actions before the posts loop start.
