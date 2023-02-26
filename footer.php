@@ -33,14 +33,14 @@
 		</div>
 		<?php endwhile;
 
-wp_reset_postdata();
+			wp_reset_postdata();
 
-else :
+				else :
 
-echo __( 'No socials found', 'textdomain' );
+				echo __( 'No socials found', 'textdomain' );
 
-endif;
-?>
+			endif;
+		?>
 		<div class="site-info">
 			<span><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?></span>
 			<span><a href="#">Terms and Conditions</a></span>
