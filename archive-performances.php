@@ -9,6 +9,19 @@ get_header(); ?>
         <h1 class="heading-position"><?php echo get_the_archive_title();?></h1>
     </div>
 </div>
+<?php get_sidebar(); ?>
+<!-- <label for="time-filter">Filter by Time:</label>
+<select id="time-filter" name="time">
+  <option value="">All Times</option>
+  <option value="12:00 am">12:00 am</option>
+  <option value="1:00 am">1:00 am</option>
+  <option value="2:00 am">2:00 am</option>
+  <!-- Add more options for each hour of the day -->
+  <!-- <option value="11:00 pm">11:00 pm</option>
+  <option value="12:00 pm">12:00 pm</option>
+</select> -->
+
+
 <!-- Desktop -->
 <div class="container post-archive-wrapper card-flex-wrap">
     <div class="row card-flex-wrap">
@@ -16,7 +29,8 @@ get_header(); ?>
         $args = array(
             'post_type' => 'performances',
             'post_status' => 'publish',
-            'posts_per_page' => -1
+            'posts_per_page' => 5,
+            'paged' => $paged
         );
 
         $query = new WP_Query( $args );
@@ -29,6 +43,7 @@ get_header(); ?>
                         <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="<?php the_title(); ?>">
                         <div class="card-body card-body-wrapper">
                             <h2 class="card-title"><?php the_title(); ?></h2>
+                            <h2><?php the_field('dates'); ?></h2>
                             <h3 class="performer-name"><?php the_field('performers_or_group_name'); ?></h3>
                             <h4>
                                 <a href="<?php the_field('venue_google_map_link'); ?>" target="_blank"><?php the_field('venue_name'); ?></a>
@@ -65,11 +80,27 @@ get_header(); ?>
 
         endif;
         ?>
+        <?php
+        // Pagination
+        global $wp_query;
+        $total_pages = $wp_query->max_num_pages;
+        if ($total_pages > 1) {
+            $current_page = max(1, get_query_var('paged'));
+            echo '<div class="container"><div class="row"><div class="pagination" style="margin:0 auto;">';
+            echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+            ));
+            echo '</div></div></div>';
+        }
+        ?>
+
     </div>
 </div>
 
 <!-- Mobile -->
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

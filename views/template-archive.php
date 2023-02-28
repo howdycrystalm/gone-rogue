@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Performances Archive
+* Template Name: Performances Template Archive
 */
 
 get_header(); ?>
@@ -72,6 +72,7 @@ get_header(); ?>
 
 <!-- Mobile -->
 
+<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>
