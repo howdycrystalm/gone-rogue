@@ -1,7 +1,7 @@
 <?php
 /**
  * Index template.
- * This is the child theme's Archive. It determins what information is shown on the "archive-post.php".
+ * This is the child theme's Archive. It determines what information is shown on the "archive-post.php".
  *
  * @package Neve
  */

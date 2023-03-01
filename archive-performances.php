@@ -10,17 +10,6 @@ get_header(); ?>
     </div>
 </div>
 <?php get_sidebar(); ?>
-<!-- <label for="time-filter">Filter by Time:</label>
-<select id="time-filter" name="time">
-  <option value="">All Times</option>
-  <option value="12:00 am">12:00 am</option>
-  <option value="1:00 am">1:00 am</option>
-  <option value="2:00 am">2:00 am</option>
-  <!-- Add more options for each hour of the day -->
-  <!-- <option value="11:00 pm">11:00 pm</option>
-  <option value="12:00 pm">12:00 pm</option>
-</select> -->
-
 
 <!-- Desktop -->
 <div class="container post-archive-wrapper card-flex-wrap">
