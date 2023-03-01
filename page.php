@@ -63,5 +63,6 @@ $context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() 
 		<?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
 	</div>
 </div>
-<?php get_footer(); ?>
 <?php get_sidebar(); ?>
+<?php get_footer(); ?>
+

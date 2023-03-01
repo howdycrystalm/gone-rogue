@@ -1,8 +1,8 @@
 <?php
 /*
 * Template Name: Performances Template Archive
+* (displays archive info on a page)
 */
-
 get_header(); ?>
 <div class="container">
     <div class="row">
