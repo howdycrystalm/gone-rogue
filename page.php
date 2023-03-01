@@ -1,41 +1,68 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying all pages.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package _s
+ * @package Neve
+ * @since   1.0.0
  */
+$container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-page' );
 
 get_header();
+
+$context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() || is_account_page() ) ? 'woo-page' : 'single-page';
 ?>
+<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
+	<div class="row">
+		<?php do_action( 'neve_do_sidebar', $context, 'left' ); ?>
+		<div class="nv-single-page-wrap col">
+			<?php
+			/**
+			 * Executes actions before the page header.
+			 *
+			 * @since 2.4.0
+			 */
+			do_action( 'neve_before_page_header' );
 
-	<main id="primary" class="site-main">
-<h3>Satuday, 2/19. This page.php file is the default page.php from the underscores theme. The only change I made was to lines 24 and 25. I think this file/page will like a single blog post, and that is where custom archive pulls info from...</h1>
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			/**
+			 * Executes the rendering function for the page header.
+			 *
+			 * @param string $context The displaying location context.
+			 *
+			 * @since 1.0.7
+			 */
+			do_action( 'neve_page_header', $context );
 
-			//get_template_part( 'template-parts/content', 'page' );
-      get_template_part( 'content', 'tmpl_archives' );
+			/**
+			 * Executes actions before the page content.
+			 *
+			 * @param string $context The displaying location context.
+			 *
+			 * @since 1.0.7
+			 */
+			do_action( 'neve_before_content', $context );
 
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'template-parts/content', 'page' );
+				}
+			} else {
+				get_template_part( 'template-parts/content', 'none' );
+			}
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+			/**
+			 * Executes actions after the page content.
+			 *
+			 * @param string $context The displaying location context.
+			 *
+			 * @since 1.0.7
+			 */
+			do_action( 'neve_after_content', $context );
+			?>
+		</div>
+		<?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+	</div>
+</div>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
 
